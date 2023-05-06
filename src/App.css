@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background-color: hsl(220, 18%, 23%);
+  font-family: 'Manrope', sans-serif;
+}
+.divider-mobile{
+  display: none;
+}
+.App {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card {
+  color: hsl(214, 20%, 84%);
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  max-width: 30rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: hsl(214, 19%, 29%);
+  line-height: 2rem;
+  display: grid;
+  place-content: center;
+}
+.card p{
+  color: hsl(150, 100%, 66%);
+  font-size: 12px;
+  padding: 1rem 0;
+}
+
+.dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:hsl(150, 100%, 66%) ;
+  width:3rem ;
+  height: 3rem;
+  border-radius: 50%;
+  margin-inline: auto;
+  margin-bottom: -2.5rem;
+  cursor: pointer;
+}
+.dice:hover {
+  box-shadow: 0px 0px 15px 2px hsl(150, 100%, 66%),0px 0px 15px 2px hsl(150, 100%, 66%);
+  transition: 0.2s ease-in;
+  
+}
+.dice img {
+  width: 1.3rem;
+}
+.card img {
+  padding:1rem 0;
+  margin-inline:auto;
+}
+@media screen and (max-width : 760px) {
+  .divider-mobile{
+    display: block;
+    margin: 0 auto;
+  }
+  .card{
+    width: 80%;
+    margin-inline:auto;
+
+  }
+  .divider-desktop{
+    display: none;
+  }
+  .dice{
+    bottom: -10%;
+    left: 42.8%;
+    margin-inline: auto;
+  }
+  
+}
