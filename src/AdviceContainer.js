@@ -5,12 +5,13 @@ import dividerMobile from './images/pattern-divider-mobile.svg'
 import dice from './images/icon-dice.svg'
 
 const AdviceContainer = () => {
-// const URL = "https://api.adviceslip.com/advice"
+let randomInedex = Math.floor(Math.random() * 16);
 const [advice, setAdvice] = useState("");
 const getAdvice = async() => {
-    const response = await axios.get('https://api.quotable.io/random')
-    const advice = await response.data;
-    console.log(advice)
+    
+    const response = await axios.get('https://type.fit/api/quotes')
+    const advice = await response.data[randomInedex].text;
+    // console.log(advice)
     setAdvice(advice)
 }
 
@@ -22,8 +23,8 @@ useEffect(() => {
 
    return (
     <div className='card'>
-    <p>ADVICE #{advice.length}</p>
-    <h2>“{advice.content}”</h2>
+    <p>ADVICE #{randomInedex}</p>
+    <h2>“{advice}”</h2>
     <img src={dividerDesktop} className="divider-desktop" alt="divider"  />
     <img src={dividerMobile} className="divider-mobile" alt="divider" />
     <div className="dice" onClick={getAdvice}>
