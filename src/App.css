@@ -68,7 +68,7 @@ body {
   .card{
     width: 80%;
     margin-inline:auto;
-
+    font-size: 0.7rem;
   }
   .divider-desktop{
     display: none;

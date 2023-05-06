@@ -5,7 +5,7 @@ import dividerMobile from './images/pattern-divider-mobile.svg'
 import dice from './images/icon-dice.svg'
 
 const AdviceContainer = () => {
-let randomInedex = Math.floor(Math.random() * 16);
+let randomInedex = Math.floor(Math.random() * 1000);
 const [advice, setAdvice] = useState("");
 const getAdvice = async() => {
     
